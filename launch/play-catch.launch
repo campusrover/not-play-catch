@@ -1,0 +1,11 @@
+<launch>
+    <node pkg='playcatch' type='camera.py' name='camera_green' output='screen' />
+    <node pkg='playcatch' type='main.py' name='main' output='screen' /> 
+    <include file="$(find usb_cam)/launch/usb_cam-test.launch" />
+    <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui"/>
+    <include file="$(find playcatch)/launch/catch_continous.launch" />
+    <node name="ball_distance" pkg="playcatch" type="ball_distance.py" output='screen' />
+    <node name="ball_to_transform" pkg="playcatch" type="ball_to_transform.py" output='screen' />
+    <param name="config_file" value="/home/nin/catkin_ws/src/playcatch/config/pose.yaml" />
+    <node pkg="tf" type="static_transform_publisher" name="camera_link" args="0.15 0 0.6 0 0 3.14 world usb_cam 1000"/> 
+</launch>
