@@ -9,7 +9,7 @@ Instead, the game Guess or Kick! was born, but I liked the name of play-catch so
 - And then download this repository. 
 
 ## Running the Code 
--	roslaunch arm_control command_center.launch
-      - If you’re working with the actual arm, ensure that it is turned on and plugged into the computer before starting. Otherwise, if you’re working in simulation, then  uncomment <arg name=use_sim value=true /> line in the launch file. 
-      -	If you want to just run this file and send commands to the arm, then you can also run: rosrun arm_control send_command.py   
--	roslaunch playcatch play-catch.launch 
+-	`roslaunch arm_control command_center.launch`
+      - If you’re working with the actual arm, ensure that it is turned on and plugged into the computer before starting. Otherwise, if you’re working in simulation, then  uncomment `<arg name=use_sim value=true />` line in the launch file. 
+      -	If you want to just run this file and send commands to the arm, then you can also run: `rosrun arm_control send_command.py`  
+-	`roslaunch playcatch play-catch.launch`
